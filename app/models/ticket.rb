@@ -23,5 +23,6 @@ class Ticket < ApplicationRecord
     stats = self.ticket_type.event.event_stat
     stats.tickets_sold -= 1
     stats.attendance -= 1
+    stats.save
   end
 end
